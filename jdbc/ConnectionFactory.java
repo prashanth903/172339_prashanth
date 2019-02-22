@@ -1,4 +1,4 @@
-package com.mirza.dao;
+package com.capg.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
