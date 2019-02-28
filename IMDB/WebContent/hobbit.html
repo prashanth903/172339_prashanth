@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>hobbit</title>
+<meta charset="utf-8">
+ <meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+<style>
+.txt-center {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+.rating {
+    width: 90px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+
+.rating > label {
+    float: right;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 1.1em;
+    cursor: pointer;
+    color: #000;
+}
+
+.rating > label:hover,
+.rating > label:hover ~ label,
+.rating > input.radio-btn:checked ~ label {
+    color: transparent;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > input.radio-btn:checked ~ label:before,
+.rating > input.radio-btn:checked ~ label:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+}
+</style>
+</head>
+<body>
+<div class="col-sm-6">
+<iframe width="500" height="372" src="https://www.youtube.com/embed/SDnYMbYB-nU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<div class="col-sm-6">
+<h3>Description</h3>
+<p>
+"The Hobbit: An Unexpected Journey" follows title character Bilbo Baggins, who is swept into an epic quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug.  Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining a company of thirteen dwarves led by the legendary warrior, Thorin Oakenshield.  Their journey will take them into the Wild; through treacherous lands swarming with Goblins and Orcs, deadly Wargs and Sorcerers. 
+Although their goal lies to the East and the wastelands of the Lonely Mountain, first they must escape the goblin tunnels, where Bilbo meets the creature that will change his life forever...Gollum.   
+Here, alone with Gollum, on the shores of an underground lake, the unassuming Bilbo Baggins not only discovers depths of ingenuity and courage that surprise even him, he also gains possession of Gollum's "precious" ring that holds unexpected and useful qualities... A simple, gold ring that is tied to the fate of all Middle-earth in ways Bilbo cannot begin to know.
+</div>
+<div class="txt-center">
+    <form action="login.jsp" action="post">
+        <div class="rating">
+        <h3>Rating </h3>
+            <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
+            <label for="star5">?</label>
+            <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
+            <label for="star4">?</label>
+            <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
+            <label for="star3">?</label>
+            <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
+            <label for="star2">?</label>
+            <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
+            <label for="star1">?</label>
+            <div class="clear"></div>
+        </div>
+    </form>
+<br>
+
+ <form action="login.jsp" method="post">
+ Comment 
+<textarea cols="50" rows="4" name="Comment"></textarea>
+<!-- <input type=submit value="submit"> -->
+
+<button id="myBtn">Submit</button>
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>You need to login first</p>
+  </div>
+</div>
+</form>
+
+
+</body>
+</html>
