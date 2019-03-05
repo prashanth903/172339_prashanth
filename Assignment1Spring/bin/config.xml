@@ -5,21 +5,34 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans   
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-<bean id="address1" class="com.app.spring.Address">
-<property name="street" value="kundanhali"></property>
-<property name="city" value="Bangalore"></property>
-<property name="state" value="Karnataka"></property>
-<property name="zip" value="500140"></property>
-<property name="country" value="India"></property>
+<!-- <bean id="address1" class="com.app.spring.Address"> -->
+<!-- <property name="street" value="kundanhali"></property> -->
+<!-- <property name="city" value="Bangalore"></property> -->
+<!-- <property name="state" value="Karnataka"></property> -->
+<!-- <property name="zip" value="500140"></property> -->
+<!-- <property name="country" value="India"></property> -->
+<!-- </bean> -->
+
+<!-- <bean id="cust" class="com.app.spring.Customer"> -->
+<!-- <property name="customerId" value="172336"></property> -->
+<!-- <property name="customerName" value="prashanth"></property> -->
+<!-- <property name="customerContact" value="90321456"></property> -->
+<!-- <property name="customerAddress"> -->
+<!-- <ref bean="address1"></ref> -->
+<!-- </property> -->
+<!-- </bean> -->
+<bean id="address2" class="com.app.spring.Address">
+<constructor-arg value="kundanhali"></constructor-arg>
+<constructor-arg value="Bangalore"></constructor-arg>
+<constructor-arg value="karnataka"></constructor-arg>
+<constructor-arg value="500140"></constructor-arg>
+<constructor-arg value="india"></constructor-arg>
 </bean>
 
 <bean id="cust" class="com.app.spring.Customer">
-<property name="customerId" value="172336"></property>
-<property name="customerName" value="prashanth"></property>
-<property name="customerContact" value="90321456"></property>
-<property name="customerAddress">
-<ref bean="address1"></ref>
-</property>
-
+<constructor-arg value="172336"></constructor-arg>
+<constructor-arg value="prashnath"></constructor-arg>
+<constructor-arg value="903214569"></constructor-arg>
+<constructor-arg ref="address2"></constructor-arg>
 </bean>
-</beans>
+</beans> 

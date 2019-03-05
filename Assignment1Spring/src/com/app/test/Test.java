@@ -12,7 +12,6 @@ public class Test {
 	ApplicationContext ac=new ClassPathXmlApplicationContext("config.xml");
 	Object ob=ac.getBean("cust");
 	Customer c=(Customer)ob;
-	
 	System.out.println(c);
 	}
 }

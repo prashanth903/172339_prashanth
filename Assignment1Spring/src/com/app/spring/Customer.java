@@ -1,10 +1,18 @@
 package com.app.spring;
 
 public class Customer {
+	public Customer(int customerId, String customerName, int customerContact, Address customerAddress) {
+		super();
+		this.customerId = customerId;
+		this.customerName = customerName;
+		this.customerContact = customerContact;
+		this.customerAddress = customerAddress;
+	}
 	private int customerId;
 	private String customerName;
 	private int customerContact;
 	private Address customerAddress;
+	
 	public Customer() {
 		super();
 	}
