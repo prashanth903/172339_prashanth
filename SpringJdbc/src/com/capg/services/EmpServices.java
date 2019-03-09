@@ -16,8 +16,8 @@ public interface EmpServices {
 	
 	List<Employee> groupBy(Employee e);
 	
-	public boolean getMaxSal(Employee e);
+	public String getMaxSal(Employee e);
 	
-	public boolean getWithoutComm(Employee e);
+	public List<Employee> getWithoutComm(Employee e);
 	
 }

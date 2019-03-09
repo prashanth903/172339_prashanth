@@ -1,6 +1,7 @@
 package com.capg.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -45,15 +46,19 @@ public class EmpServicesImpl implements EmpServices {
 	}
 
 	@Override
-	public boolean getMaxSal(Employee e) {
-		// TODO Auto-generated method stub
-		return false;
+	public String getMaxSal(Employee e) {
+		List<Employee> l=ed.getAll();
+		Double maxSal=l.stream().map(ed->e.getSal()).max((x,y)->x.compareTo(y)).get();
+		System.out.println(maxSal);
+		return null;
 	}
 
 	@Override
-	public boolean getWithoutComm(Employee e) {
-		// TODO Auto-generated method stub
-		return false;
+	public List<Employee> getWithoutComm(Employee e) {
+		List<Employee> l=ed.getAll();
+		List<String> result = l.stream() .filter(line ->line.getComm()==0).map(ed->e.geteName()).collect(Collectors.toList());
+		result.forEach(emp -> System.out.println(emp));
+		return null;
 	}	
 	
 }

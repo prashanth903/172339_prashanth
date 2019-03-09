@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.capg.DAO.EmpDaoImpl;
+import com.capg.DAO.EmpDAO;
 import com.capg.pojo.Employee;
 import com.capg.services.EmpServicesImpl;
 
@@ -28,12 +28,12 @@ public class TestEmp {
 		e.setComm(0);
 		e.setDeptNo(20);
 
-		EmpDaoImpl edl = (EmpDaoImpl) ac.getBean("edao");
+		EmpDAO edl = (EmpDAO) ac.getBean("edao");
 		EmpServicesImpl esi=new EmpServicesImpl();
 //		 esi.updateEmpSal(e);
 		edl.update(e);
 		edl.delete(e);
-		esi.getEmp(e);
+		
 	 esi.orderBy(e);
 	 
 	 List<Employee> list1= edl.orderBy();
@@ -61,11 +61,15 @@ public class TestEmp {
 			 System.out.println(e2);
 			}
 	
-//		 List<Employee> list1= esi.orderBy(e);
+				esi.getMaxSal(e);
+				
+				
+			//	esi.getWithoutComm(e);
+//		 List<Employee> list4= esi.getWithoutComm(e);
 //	
-//			for(Employee e1:list1)
+//			for(Employee e7:list4)
 //			{
-//		 System.out.println(e1);
+//		 System.out.println(e7);
 //		}
 //		 
 //		edl.insert(e);
